@@ -6,12 +6,18 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "$MOD_ID",
-	"name": "$MOD_NAME",
+	"id": "$arva.input-buffer",
+	"name": "$input_bufer",
 	"version": "$MOD_VERSION",
-	"developer": "$MOD_DEVELOPER",
+	"developer": "$Arva",
 	"description": "$MOD_DESCRIPTION",
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
+		"settings": {
+  "show-overlay": {
+    "type": "bool",
+    "name": "Mostrar indicador",
+    "description": "Muestra los ticks configurados y los ticks salvados.",
+    "default": true,
 	}
 }
