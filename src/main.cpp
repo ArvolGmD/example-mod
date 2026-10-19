@@ -39,8 +39,8 @@ class $modify(BufferGJBGL, GJBaseGameLayer) {
         GJBaseGameLayer::handleButton(down, button, isPlayer1);
     }
 
-    void processCommands(float dt) {
-        GJBaseGameLayer::processCommands(dt);
+    void processCommands(float dt, bool isHalfTick, bool isLastTick) {
+        GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
 
         for (int i = 0; i < 2; ++i) {
             bool p1 = (i == 0);
@@ -114,12 +114,12 @@ class $modify(BufferPlayLayer, PlayLayer) {
 };
 
 class $modify(BufferKeys, CCKeyboardDispatcher) {
-    bool dispatchKeyboardMSG(enumKeyCodes key, bool down, bool repeat) {
+    bool dispatchKeyboardMSG(enumKeyCodes key, bool down, bool repeat, double timestamp) {
         if (down && !repeat && key == KEY_F6) {
             Buffer::levelIdx = (Buffer::levelIdx + 1) % 4;
             Buffer::clear();
             log::info("Input Buffer: {} ticks", Buffer::ticks());
         }
-        return CCKeyboardDispatcher::dispatchKeyboardMSG(key, down, repeat);
+        return CCKeyboardDispatcher::dispatchKeyboardMSG(key, down, repeat, timestamp);
     }
 };
