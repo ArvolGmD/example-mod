@@ -1,23 +1,22 @@
 {
-	"geode": "$GEODE_VERSION",
-	"gd": {
-		"win": "2.2081",
-		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
-	},
-	"id": "$arva.input-buffer",
-	"name": "$input_bufer",
-	"version": "$MOD_VERSION",
-	"developer": "$Arva",
-	"description": "$MOD_DESCRIPTION",
-	"dependencies": {
-		"geode.node-ids": ">=v1.23.3"
-		"settings": {
-  "show-overlay": {
-    "type": "bool",
-    "name": "Mostrar indicador",
-    "description": "Muestra los ticks configurados y los ticks salvados.",
-    "default": true,
-	}
+  "geode": "5.11.2",
+  "gd": {
+    "win": "2.2081",
+    "android": "2.2081",
+    "mac": "2.2081",
+    "ios": "2.2081"
+  },
+  "id": "arva.input-buffer",
+  "name": "Input Buffer",
+  "version": "v1.0.0",
+  "developer": "Arva",
+  "description": "Buffer de entradas con ticks ajustables (F6 para cambiar).",
+  "settings": {
+    "show-overlay": {
+      "type": "bool",
+      "name": "Mostrar indicador",
+      "description": "Muestra los ticks configurados y los ticks salvados.",
+      "default": true
+    }
+  }
 }
